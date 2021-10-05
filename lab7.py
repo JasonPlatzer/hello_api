@@ -1,18 +1,28 @@
-import logging
+
+
+
+
 import requests
 import os
+import logging
+
+
+
+#from https://www.datadoghq.com/blog/python-logging-best-practices/
+logging.basicConfig(level=logging.DEBUG, filename='lab7.log', format='%(asctime)s %(levelname)s:%(message)s')
 
 
 
 
+
+#logging = logging.getLogger(__name__)
 key = os.environ.get('WEATHER_KEY')
 
 
 url = f'http://api.openweathermap.org/data/2.5/forecast'
 
 def main():
-    #from https://www.datadoghq.com/blog/python-logging-best-practices/
-    logging.basicConfig(level=logging.DEBUG, filename='lab7_log.log', format='%(asctime)s %(levelname)s:%(message)s')
+    
     location = get_location()
     # puts the results of get_current_weather into variables
     weather_data, error = get_current_weather(location, key)
