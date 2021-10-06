@@ -1,0 +1,3 @@
+2021-10-06 15:24:54,183 INFO:user has entered data paris, fr
+2021-10-06 15:24:54,193 DEBUG:Starting new HTTP connection (1): api.openweathermap.org:80
+2021-10-06 15:24:54,371 DEBUG:http://api.openweathermap.org:80 "GET /data/2.5/forecast?q=paris%2Cfr&units=metric&appid=10dcd5836c7b61b0e7af5484e980db60 HTTP/1.1" 200 15726
